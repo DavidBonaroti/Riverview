@@ -20,7 +20,7 @@ requested resource.
    
 About.ejs
 
-1. Transfer "about" information from original wbsite with styling.
+1. Transfer "about" information from original website with styling.
 
 
 Contact.ejs
