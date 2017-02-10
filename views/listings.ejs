@@ -47,26 +47,25 @@
                 data-city="<%= listings[i].city %>"
                 data-zillow="<%= listings[i].zillow %>"
                 type="button"
-                class="btn btn-success zillow-btn-<%= listings[i].id %>" id="button">
+                class="btn btn-success zillow-btn" id="button">
                 Additional Info
               </button>
             </div>
-            <div class="map" data-listing-id="<%= listings[i].id %>">
+            <div class="map" id="map-id">
             </div>
         </div>
       </div>
       <% } %>
     </div>
     <script>window.listings = <%- JSON.stringify(listings) %>;</script>
-    <script src="javascripts/zillow_request.js"></script>
     <!-- <script>
-          function initMaps() {
+          function initMap() {
             listings.forEach(listing => {
               // create a google maps map for every listing
               var center = {lat: listing.lat, lng: listing.lng};
               // define a map for every listing's .map element
               // const listingMapElement = document....;
-              var map = new google.maps.Map($('[data-listing-id="listing.id"]')), {
+              var map = new google.maps.Map(document.getElementById("map-id"), {
                 center,
                 zoom: 14
               });
@@ -78,5 +77,6 @@
           }
     </script> -->
     <% include partials/scripts.ejs %>
+    <script src="javascripts/zillow_request.js"></script>
   </body>
 </html>
