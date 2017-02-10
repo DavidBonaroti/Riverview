@@ -2,6 +2,9 @@
 Revised website for the Riverview Real Estate website. 
 Original website URL: http://www.riverview-realestate.com/
 
+To launch application: Navigate to directory, if nodemon is installed with npm, enter "nodemon app.js" in your terminal. 
+If not, enter "node app.js" in the terminal. 
+
 Features to be completed:
 
 Listings.ejs
