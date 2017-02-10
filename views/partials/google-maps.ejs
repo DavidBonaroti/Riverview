@@ -1,0 +1,14 @@
+<script>
+      var map;
+      function initMap() {
+        var listing = {lat: <%= lat %>, lng: <%= lng %>};
+        map = new google.maps.Map(document.getElementById('map_listing'), {
+          center: listing,
+          zoom: 14
+        });
+        var marker = new google.maps.Marker({
+          position: listing,
+          map: map
+        });
+      }
+</script>

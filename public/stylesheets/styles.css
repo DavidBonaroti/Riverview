@@ -1,0 +1,96 @@
+.nav {
+  border: 0;
+}
+
+.header {
+  width: 100%;
+}
+
+.listing-thumbnail {
+  height: 300px;
+  width: 300px;
+}
+
+#contact-map{
+  height: 250px;
+  width: 100%;
+  background-color: gray;
+  margin: 25px auto;
+}
+
+.contact-info{
+  margin: auto;
+  margin-top: 55px;
+  margin-bottom: 55px;
+  text-align: center;
+}
+
+#map-listing{
+  height: 250px;
+  width: 100%;
+  background-color: gray;
+}
+
+#video-element {
+/*  making the video fullscreen  */
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+}
+
+.video-container {
+  position: relative;
+}
+
+
+.listing-row {
+  padding: 25px;
+  border-bottom: solid #656262 2px;
+}
+
+.nav-center.nav {
+  text-align: center;
+}
+
+.nav > li {
+  float:none;
+  display: inline-block;
+}
+
+.full-video {
+  width: 100%;
+}
+
+/* see https://jsfiddle.net/ut5wfene/1 */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  padding-top: 150px;
+  text-align: center;
+  color: white;
+  font-family: "muli", sans-serif;
+}
+
+.top {
+  padding: 15px;
+  border-bottom: solid #656262 2px;
+}
+
+h1 {
+  font-size: 65px;
+}
+
+.btn-success {
+  background-color: #3a714f;
+  border-color: #3a714f;
+  opacity: 0.7;
+}

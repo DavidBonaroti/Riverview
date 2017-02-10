@@ -1,0 +1,35 @@
+{
+  "listings": [
+      {
+        "id": 0,
+        "address": "700 Delaware Avenue",
+        "city": "Oakmont",
+        "state": "PA",
+        "zip": "15139",
+        "price": "210,000",
+        "bedroom": 3,
+        "bath": 3,
+        "sqft": 1512,
+        "image": "delaware",
+        "zillow": "700+Delaware+Avenue",
+        "lat": 40.517079,
+        "lng": -79.836395
+      },
+
+      {
+        "id": 1,
+        "address": "220 Washington Avenue",
+        "city": "Oakmont",
+        "state": "PA",
+        "zip": "15139",
+        "price": "105,000",
+        "bedroom": 3,
+        "bath": 2,
+        "sqft": 1808,
+        "image": "washington",
+        "zillow": "220+Washington+Ave",
+        "lat": 40.515723,
+        "lng": -79.840618
+      }
+              ]
+}

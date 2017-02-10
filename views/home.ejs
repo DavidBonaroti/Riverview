@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include partials/head.ejs %>
+  </head>
+  <body>
+    <div>
+      <% include partials/nav.ejs %>
+    </div>
+    <div class="video-container">
+      <video class="full-video" preload="auto" autoplay="true" loop="loop" muted="muted" poster="">
+          <source src="videos/oakmont-final-v2-small.mp4" type="video/mp4">
+          Video Not Supported
+      </video>
+      <div class="overlay">
+        <h1>Riverview Real Estate</h1>
+        <a href="/listings"><button type="button" class="btn btn-success btn-home">Find Your New Home</button></a>
+      </div>
+    </div>
+    <% include partials/scripts.ejs %>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include partials/head.ejs %>
+  </head>
+  <body>
+    <div class="container">
+      <% include partials/nav.ejs %>
+      <% for (var i = 0; i < listings.length; i++) { %>
+      <div class="row listing-row">
+          <!--Bootstrap Carousel - Left 3rd Column-->
+        <div class="col-md-6">
+            <div id="carousel-listing-<%= listings[i].id %>" class="carousel">
+              <ol class="carousel-indicators">
+                <li data-target = "#carousel-listing-<%= listings[i].id %>" data-slide-to="0" class="active"></li>
+                <li data-target = "#carousel-listing-<%= listings[i].id %>" data-slide-to="1"></li>
+                <li data-target = "#carousel-listing-<%= listings[i].id %>" data-slide-to="2"></li>
+                <li data-target = "#carousel-listing-<%= listings[i].id %>" data-slide-to="3"></li>
+                <li data-target = "#carousel-listing-<%= listings[i].id %>" data-slide-to="4"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="/images/<%= listings[i].image %>/<%= listings[i].image %>5.jpg" alt="First Slide" class="img-responsive">
+                </div>
+                <div class="item">
+                  <img src="/images/<%= listings[i].image %>/<%= listings[i].image %>4.jpg" alt="First Slide" class="img-responsive">
+                </div>
+                <div class="item">
+                  <img src="/images/<%= listings[i].image %>/<%= listings[i].image %>3.jpg" alt="First Slide" class="img-responsive">
+                </div>
+                <div class="item">
+                  <img src="/images/<%= listings[i].image %>/<%= listings[i].image %>2.jpg" alt="First Slide" class="img-responsive">
+                </div>
+                <div class="item">
+                  <img src="/images/<%= listings[i].image %>/<%= listings[i].image %>1.jpg" alt="First Slide" class="img-responsive">
+                </div>
+              </div>
+            </div>
+        </div>
+          <!--Property Information from JSON + Zillow Request API Request Button - Middle 3rd Column-->
+        <div class="col-md-6">
+            <div class="info">
+              <h5>Address: <%= listings[i].address %></h5>
+              <h5>City: <%= listings[i].city %>, <%= listings[i].state %> <%= listings[i].zip %></h5>
+              <h5>Asking Price: $<%= listings[i].price %></h5>
+              <button
+                data-city="<%= listings[i].city %>"
+                data-zillow="<%= listings[i].zillow %>"
+                type="button"
+                class="btn btn-success zillow-btn-<%= listings[i].id %>" id="button">
+                Additional Info
+              </button>
+            </div>
+            <div class="map" data-listing-id="<%= listings[i].id %>">
+            </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+    <script>window.listings = <%- JSON.stringify(listings) %>;</script>
+    <script src="javascripts/zillow_request.js"></script>
+    <!-- <script>
+          function initMaps() {
+            listings.forEach(listing => {
+              // create a google maps map for every listing
+              var center = {lat: listing.lat, lng: listing.lng};
+              // define a map for every listing's .map element
+              // const listingMapElement = document....;
+              var map = new google.maps.Map($('[data-listing-id="listing.id"]')), {
+                center,
+                zoom: 14
+              });
+              var marker = new google.maps.Marker({
+                position: center,
+                map
+              });
+            });
+          }
+    </script> -->
+    <% include partials/scripts.ejs %>
+  </body>
+</html>

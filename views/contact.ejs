@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include partials/head.ejs %>
+  </head>
+  <body>
+    <div class="container-contact">
+      <% include partials/nav.ejs %>
+      <div class="contact-info">
+        <h5>808 Allegheny River Boulevard</h5>
+        <h5>Oakmont, PA 15139</h5>
+        <h5>Phone: 412 | 828 | 3565</h5>
+        <h5>Fax: 412 | 828 | 2227</h5>
+        <h5>E-Mail: FBonaroti@hotmail.com</h5>
+      </div>
+      <div id="contact-map"></div>
+    </div>
+    <script>
+          var map;
+          function initMap() {
+            var office = {lat: 40.524847, lng: -79.841013};
+            map = new google.maps.Map(document.getElementById('contact-map'), {
+              center: office,
+              zoom: 14
+            });
+            var marker = new google.maps.Marker({
+              position: office,
+              map
+            });
+          }
+    </script>
+    <% include partials/scripts.ejs %>
+  </body>
+</html>
